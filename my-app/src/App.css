@@ -1,0 +1,29 @@
+.loginform,.signupform
+{
+    color:white;
+  border-radius: 10px;
+  margin:10% 30%;
+  background-image: url("/src/img/mainback.jpg");
+ padding:10% 5%
+
+}
+
+.loginform:hover,.signupform:hover
+{
+  border: none;
+  box-shadow: 2px 5px 5px 8px gray;
+  transition: 0.8s;
+}
+
+h3
+{
+text-align: center;
+}
+
+.btnhover:hover,.gbtnre:hover
+{
+    color:black;
+    transition: 0.8s;
+    background-color: #4ff687;
+    border: 2px solid white;
+}
