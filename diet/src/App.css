@@ -1,0 +1,661 @@
+
+
+/*Login and signup forms*/
+.loginform,.signupform
+{
+    color:white;
+  border-radius: 10px;
+  margin:10% 30%;
+  background-image: url("/src/img/mainback.jpg");
+ padding:10% 5%
+
+}
+
+.loginform:hover,.signupform:hover
+{
+  border: none;
+  box-shadow: 2px 5px 5px 8px gray;
+  transition: 0.8s;
+}
+
+h3
+{
+text-align: center;
+}
+
+.btnhover,.regbtn
+{
+  width: 100%;
+  color: #FFF;
+  border: 2px solid black;
+  border-radius: 4px;
+  display: inline-block;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 white;
+  -webkit-transition: ease-out 0.8s;
+  -moz-transition: ease-out 0.8s;
+  transition: ease-out 0.8s;
+}
+
+.btnhover:hover,.regbtn:hover
+{
+    cursor: pointer;
+    color:black;
+    box-shadow: inset 0 0 0 50px white;
+    border: 2px solid white;
+}
+
+/*Grid layout for inventory items.js file*/
+.contgrid
+{
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+.content
+{
+  border-radius: 1rem;
+  box-shadow: 1px 1px 1px 0 black;
+  display: grid;
+  justify-content: center;
+  background-color:#E7E9EB;
+  grid-template-columns: repeat(auto-fit ,16rem);
+  row-gap: 40px;
+  column-gap: 40px;
+  padding:4rem;
+}
+
+
+
+.card {
+  position: relative;
+  width: 16rem;
+  height: 20rem;
+  background: teal;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -70%;
+  width: 100%;
+  height: 100%;
+  background: white;
+  transform: skewY(345deg);
+  transition: 0.5s;
+}
+.card:hover
+{
+  transition: 0.5s;
+  box-shadow: 3px 0px 5px 2px black;
+}
+
+.card:hover::before {
+  top: -70%;
+  transform: skewY(290deg);
+}
+
+.card::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 6em;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.card .bannerimg {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 1;
+}
+
+.card .bannerimg img {
+    max-width: 100%;
+    transition: .5s;
+}
+
+.card:hover .bannerimg img {
+    max-width: 50%;
+      
+}
+
+.item .card {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.item .card h3{
+  font-size: 18px;
+  position: relative;
+  display: flex;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.item .card h5 {
+  position: relative;
+  display: flex;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.btns
+{
+  opacity:0.5;
+  display: flex;
+  padding: 0.4rem;
+  border-radius: 0.5rem;
+
+}
+.addtocart
+{
+  text-align: center;
+  position: relative;
+  display: flex;
+  width: 70%;
+}
+.btns:hover
+{
+  opacity:1;
+  display: flex;
+  transition:0.5s;
+  padding: 0.4rem;
+
+}
+/*inventory mai filter */
+
+
+.box {
+  width: 100%;
+  background-color: teal;
+  opacity:0.7;
+  padding:1rem;
+  color:white;
+  border: 2px solid #fff;
+  text-align: center;
+  border-radius: 20px/50px;
+  transition: all 0.3s ease-out;
+
+}
+
+.filt
+{
+  padding-bottom: 1.5%;
+}
+.box:hover {
+  background-color: teal;
+  opacity:1;
+}
+
+.ctype
+{text-align: center;
+
+}
+
+.ctype label
+{
+  margin: 0px 4% 0px 1%;
+}
+
+#type
+{
+  accent-color: black;
+  
+}
+
+/*------------------------------------footer---------------------------------*/
+
+.footercontainer
+{
+  width:100%;
+  display: grid;
+  background-color: teal;
+  color:white;
+  grid-template-columns: repeat(3,18rem);
+  row-gap: 1rem;
+  align-content: center;
+  column-gap: 15rem;
+}
+
+.footer_grid h3
+{
+  margin-top: 2rem;
+  width:18rem;
+  text-decoration: underline;
+}
+
+.footer_grid_bottom
+{
+  text-align: center;
+  background-color: teal;
+  color: white;
+}
+.socialicons
+{
+  list-style-type: none;
+  width: 20%;
+  margin: 0 40%;
+  padding: 1% 0;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  
+}
+.social{
+  color: white;
+}
+
+.footer_grid_list a
+{
+  text-decoration: none;
+  color:white;
+  display: inline-block;
+  position: relative;
+}
+
+.footer_grid_list a::after
+{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color:white;
+  transition: transform 0.3s ease-out;
+}
+
+.footer_grid_list a:hover::after
+{
+  transform: scaleX(1);
+}
+
+.footer_copyrights
+{
+  text-align: center;
+  background-color:white;
+  padding-top: 1% ;
+  padding-bottom: 1%;
+  color: teal;
+}
+
+.mainfootercontainer
+{
+  background-color: #191919;
+}
+
+/*--------------------------------------navbar-------------------------*/
+
+
+
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+.navbar{
+    box-shadow: 0px 5px 10px 0px #aaa;
+    width: 100%;
+    height: fit-content;
+    background-color: teal;
+    color: white;
+    z-index: 100;
+}
+
+.navbar-container{
+    display: flex;
+    color:white;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-items{
+    order: 2;
+    color: white;
+    display: flex;
+}
+.logo{
+    order: 1;
+    font-size: 2.3rem;
+    color:white;
+}
+
+.menu-items li{
+    list-style: none;
+    margin-left: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.navbar a{
+    display: inline-block;
+    position: relative;
+    color:white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+.navbar a::after
+{content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color:white;
+  transition: transform 0.3s ease-out;
+}
+
+.navbar a:hover::after
+{
+  transform: scaleX(1);
+}
+
+@media (max-width: 768px){
+    .navbar{
+        opacity: 0.95;
+    }
+
+
+
+    .navbar .menu-items {
+        padding-top: 50px;
+        background: #fff;
+        height: 80vh;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+        padding-left: 40px;
+        transition: transform 0.5s ease-in-out;
+        box-shadow:  5px 0px 10px 0px #aaa;
+        overflow: scroll;
+    }
+
+    .navbar .menu-items li{
+        margin-bottom: 1.8rem;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .logo{
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 2.5rem;
+    }
+
+
+}
+/*------------------------------Edit profile-------------------------------*/
+.card-body
+{
+  display: grid;
+  grid-template-columns: 2;
+}
+
+.editcard
+{
+  padding:1rem 3rem 2rem 3rem;
+  margin: 6rem 0;
+  border-radius: 1rem;
+  background-color: teal;
+  color: white;
+}
+
+.head1 .head2
+{
+  color:white;
+  background-color: #191919;
+  cursor:pointer
+}
+
+
+.editbuttons button
+{
+  border-radius: 0.5rem;
+  margin:2rem;
+  margin-left: 7%;
+  width:25rem;
+  height: 3rem;
+  text-align: center;
+  color: teal;
+  background-color: white;
+  border: 2px solid teal;
+  display: inline-block;
+  box-shadow: inset 0 0 0 0 white;
+  -webkit-transition: ease-out 0.8s;
+  -moz-transition: ease-out 0.8s;
+  transition: ease-out 0.8s;
+
+}
+
+.editbuttons button:hover
+{
+  cursor: pointer;
+  color:teal;
+  box-shadow: inset 0 0 0 50px white;
+  border: 2px solid white;
+}
+
+/*add remove update card*/
+
+
+.add_meal 
+{
+  margin: 5% 0%;
+  padding:5% 0%;
+  display: grid;
+  grid-template-columns: repeat(3,18rem);
+  row-gap: 1rem;
+  column-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  background-color: teal;
+  border-radius: 1rem;
+}
+
+.mealitem
+{
+  width:18rem;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 4%;
+}
+
+.mealitem input 
+{
+  width:100%;
+  border-radius: 0.5rem;
+}
+.mealitem textarea
+{
+  width:100%;
+  border-radius: 0.5rem;
+
+}
+
+.mealinput_btn button{
+  width: 100%;
+  margin-top: 4%;
+  height:3rem ;
+  color: teal;
+  background-color: white;
+  border:none;
+  border-radius: 1rem;
+  border: 1px solid white;
+
+}
+
+.mealinput_btn button:hover{
+  transition: 0.8s;
+  background-color: teal;
+  color: white;
+
+}
+.mealinput_btn{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  margin:1% 35%;
+  border-radius: 1rem;
+
+}
+
+.meal_items_grid
+{
+  margin: 5% 0%;
+  padding:5% 0%;
+  display: grid;
+  grid-template-columns: repeat(3,18rem);
+  row-gap: 1rem;
+  column-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  background-color: teal;
+  border-radius: 1rem;
+}
+
+.radiobtns
+{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  color:white;
+}
+
+.radiobtns label
+{
+  margin: 0px 4% 0px 1%;
+}
+
+
+/*--------checkout form -------------*/
+
+#form-wrapper {
+  background-color: white;
+  margin: auto;
+  margin-bottom: 10%;
+  margin-top: 5%;
+  width: 600px;
+  height: auto;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid lightgray;
+}
+
+#header {
+  background-color: teal;
+  border-radius: 10px 10px 0px 0px;
+  border: lightgray solid 1px;
+}
+
+#form-wrapper h1 {
+  color: white;
+}
+
+#form-wrapper h5 {
+  color: #997654;
+}
+
+#form-wrapper i {
+  color: #997654;
+}
+
+#form-wrapper button i {
+  color: white;
+  margin: 5% 0;
+}
+
+#form-wrapper button {
+  background-color: #638D99 !important;
+}
+
+#form-wrapper select {
+  display: inline;
+}
+
+#invoice-POS{
+  box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
+  padding:10% 5%;
+  margin: 5% 5%;
+  border-radius: 1rem;
+  width: 20rem;
+  height:90%;
+  background: #FFF;
+}
+  
+:selection {
+  background-color: #f31544;
+   color: #FFF;}
+::moz-selection {background: #f31544; color: #FFF;}
+h1{
+  font-size: 1.5em;
+  color: #222;
+}
+h2{font-size: .9em;}
+h3{
+  font-size: 1.2em;
+  font-weight: 300;
+  line-height: 2em;
+}
+p{
+  font-size: .7em;
+  color: #666;
+  line-height: 1.2em;
+}
+ 
+#top, #mid,#bot{ /* Targets all id with 'col-' */
+  border-bottom: 1px solid #EEE;
+}
+
+#top{min-height: 100px;}
+#mid{min-height: 80px;} 
+#bot{ min-height: 50px;}
+
+
+.info{
+  display: block;
+  margin-left: 0;
+}
+.title{
+  float: right;
+}
+.title p{text-align: right;} 
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+td{
+}
+.tabletitle{
+  font-size: .5em;
+  background: #EEE;
+}
+.service{border-bottom: 1px solid #EEE;}
+.item{width: 24mm;}
+.itemtext{font-size: .5em;}
+
+#legalcopy{
+  margin-top: 5mm;
+}
+
+.checkoutmain
+{
+  display: grid;
+  background-color: white;
+  grid-template-columns: repeat(2,30rem);
+  column-gap: 1rem;
+}
